@@ -1,6 +1,6 @@
 FROM cockroachdb/cockroach
 
-RUN apk add --no-cache curl bash python && \
+RUN apt update && apt install -y curl bash python && \
 	curl https://sdk.cloud.google.com | bash && \
 	rm -rf /root/.config
 
